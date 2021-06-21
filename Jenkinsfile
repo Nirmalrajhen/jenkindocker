@@ -1,14 +1,14 @@
 pipeline { 
     environment { 
-        registry = "YourDockerhubAccount/YourRepository" 
-        registryCredential = 'dockerhub_id' 
-        dockerImage = '' 
+        registry = "rnirmal18@gmail.com/dockerrepo" 
+        registryCredential = 'nirmalrajhen' 
+        dockerImage = 'myimage' 
     }
     agent any 
     stages { 
         stage('Cloning our Git') { 
             steps { 
-                git 'https://github.com/YourGithubAccount/YourGithubRepository.git' 
+                git 'https://github.com/Nirmalrajhen/jenkindocker.git' 
             }
         } 
         stage('Building our image') { 
