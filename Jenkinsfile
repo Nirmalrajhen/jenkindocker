@@ -8,7 +8,7 @@ pipeline {
     stages { 
         stage('Cloning our Git') { 
             steps { 
-                git 'https://github.com/Nirmalrajhen/jenkindocker.git' 
+                bat 'git https://github.com/Nirmalrajhen/jenkindocker.git' 
             }
         } 
         stage('Building our image') { 
