@@ -8,7 +8,7 @@ pipeline {
     stages { 
         stage('Cloning our Git') { 
             steps { 
-                bat 'git https://github.com/Nirmalrajhen/jenkindocker.git' 
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Nirmalrajhen/jenkindocker.git']]]) 
             }
         } 
         stage('Building our image') { 
